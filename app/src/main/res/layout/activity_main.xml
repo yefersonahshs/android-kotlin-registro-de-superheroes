@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/hero_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            tools:src="@tools:sample/avatars"
+            android:text="Hello World!" />
+
+        <EditText
+            android:id="@+id/hero_name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/hero_image"
+            android:layout_alignTop="@id/hero_image"
+            android:layout_marginStart="16dp"
+            android:hint="Superhero name"
+            />
+
+        <EditText
+            android:id="@+id/alter_ego_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/hero_image"
+            android:layout_alignBottom="@id/hero_image"
+            android:layout_marginStart="16dp"
+            android:hint="Alter Ego name"
+            />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/hero_image"
+            />
+
+        <TextView
+            android:id="@+id/bio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line"
+            android:layout_marginTop="20dp"
+            android:text="@string/bio"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            />
+
+
+        <EditText
+            android:id="@+id/description_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bio"
+            android:inputType="textMultiLine"
+            tools:text="super heroe mega animado con muchos poderes y cualidades expectaculares poderosas y buenas"
+            />
+
+        <TextView
+            android:id="@+id/Power"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/description_edit"
+            android:layout_marginTop="20dp"
+            android:text="@string/poder"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            />
+
+
+        <RatingBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Power"
+            android:onRatingChanged=""
+            />
+
+
+    </RelativeLayout>
+</layout>
