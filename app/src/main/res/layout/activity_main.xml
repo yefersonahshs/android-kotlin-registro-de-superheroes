@@ -17,28 +17,26 @@
             android:id="@+id/hero_image"
             android:layout_width="120dp"
             android:layout_height="120dp"
-            tools:src="@tools:sample/avatars"
+            android:src="@android:drawable/ic_menu_camera"
             android:text="Hello World!" />
 
         <EditText
             android:id="@+id/hero_name_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/hero_image"
             android:layout_alignTop="@id/hero_image"
             android:layout_marginStart="16dp"
-            android:hint="Superhero name"
-            />
+            android:layout_toEndOf="@id/hero_image"
+            android:hint="Superhero name" />
 
         <EditText
             android:id="@+id/alter_ego_edit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/hero_image"
             android:layout_alignBottom="@id/hero_image"
             android:layout_marginStart="16dp"
-            android:hint="Alter Ego name"
-            />
+            android:layout_toEndOf="@id/hero_image"
+            android:hint="Alter Ego name" />
 
         <View
             android:id="@+id/line"
@@ -67,9 +65,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/bio"
-            android:inputType="textMultiLine"
-            tools:text="super heroe mega animado con muchos poderes y cualidades expectaculares poderosas y buenas"
-            />
+            tools:text="super heroe mega animado con muchos poderes y cualidades expectaculares poderosas y buenas" />
 
         <TextView
             android:id="@+id/Power"
@@ -85,11 +81,23 @@
 
 
         <RatingBar
-            android:layout_width="match_parent"
+            android:id="@+id/ratin_bar"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/Power"
-            android:onRatingChanged=""
-            />
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:numStars="5"
+            android:rating="1"
+            android:theme="@style/RatingBar" />
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Save" />
 
 
     </RelativeLayout>
